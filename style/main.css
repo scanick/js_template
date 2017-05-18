@@ -1,0 +1,154 @@
+@import url(font.css);
+
+body{
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+#preload{
+}
+/*============================================================================================*
+**************************************************************************************
+**============================================================================================*/
+.wheel {
+	transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 1500ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 1500ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 1500ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+
+	animation-name: spin;
+	animation-duration: 1500ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+
+/*============================================================================================*
+***audioPlayer***********************************************************************************
+**============================================================================================*/
+.audioPlayer {
+	margin-top: 10px;
+	width: 200px;
+	height: 100px;
+	float: right;
+	background: #5F9EA0;
+	background: linear-gradient(to top, ##5F9EA0, #4682B4);
+ 
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+	border-style: solid;
+    border-color: #333333;
+}
+
+.audioPlayer #controlButtonPlayer {
+	position: relative;
+	border-top: 20px solid #333333;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	top: -5px;
+	height: 0;
+	width: 70px;
+	left: 50px;
+}
+
+.audioPlayer #progress {
+	position: relative;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	border-style: solid;
+    border-color: #333333;
+
+	width: 150px;
+	height: 55px;
+	left: 25px;
+}
+
+.audioPlayer .buttonPlay {
+	cursor: pointer;
+	position: relative;
+	border: 2px solid #fff;
+	width: 20px; 
+	height: 20px; 
+	background-color: transparent;
+	border-radius: 50%; 
+}
+
+.audioPlayer .buttonPlay:before {
+	position: absolute;
+	left: 8px;
+	top: 4px;
+	content:'';
+	border-left:  6px solid white;
+	border-top: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+}
+
+.audioPlayer .buttonPause {
+	cursor: pointer;
+	position: relative;
+	border: 2px solid #fff;
+	width: 20px; 
+	height: 20px; 
+	background-color: transparent;
+	border-radius: 50%; 
+}
+
+.audioPlayer .buttonPause:before {
+	width: 3px;        
+	height: 10px;
+	background: #fff;
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: 6px;
+}
+ 
+.audioPlayer .buttonPause:after {
+	width: 3px;
+	height: 10px;
+	background: #fff;
+	position: absolute;
+	content: "";
+	top: 5px;
+	right: 6px;
+}
